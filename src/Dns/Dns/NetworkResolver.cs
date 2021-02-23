@@ -21,7 +21,7 @@ namespace System.Net
                 IPInterfaceProperties property = netInt.GetIPProperties();
                 foreach (UnicastIPAddressInformation ip in property.UnicastAddresses)
                 {
-                    if (ip.IsDnsEligible && ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    if (ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                     {
                         // Windows不包含
                         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
